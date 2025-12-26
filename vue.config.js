@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: '/expenses-tracker/',
+  publicPath: '/expenses-tracker-261225/',
 };
