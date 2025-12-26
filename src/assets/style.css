@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@font-face {
+  font-family: Anta;
+  src: url(./Anta-Regular.ttf);
+}
+@font-face {
+  font-family: PlaypenSans;
+  src: url(./PlaypenSans-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: Merriweather;
+  src: url(./Merriweather-VariableFont_opsz-wdth-wght.ttf);
+}
+
+:root {
+  --box-shadow: inset -2px 0px 10px #471396, 1px 1px 10px #471396;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #020010;
+  color: #b13bff;
+  min-height: 100vh;
+  margin: 0;
+  font-family: playpenSans, Merriweather, 'Lato', sans-serif;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: fit-content;
+  padding: 20px;
+  margin: 30px auto;
+  display: grid;
+  gap: 100px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.ul-wrapper {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 725px;
+  padding: 0px 25px 0px 5px;
+}
+
+ul {
+  padding: 0 10px;
+  overflow-x: visible;
+}
+
+input {
+  font-family: PlaypenSans;
+}
+
+h1 {
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+h2 {
+  text-align: center;
+}
+
+h3 {
+  border-bottom: 1px solid #b13bff;
+  padding-bottom: 10px;
+  margin: 40px 0 10px;
+}
+
+h4 {
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+}
+
+hr {
+  color: #b13bff;
+  box-shadow: var(--box-shadow);
+}
+
+.inc-exp-container {
+  color: #ffcc00;
+  border: 3px solid #471396;
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+.inc-exp-container > div {
+  flex: 1;
+  text-align: center;
+}
+
+.inc-exp-container > div:first-of-type {
+  border-right: 2px solid #471396;
+}
+
+.money {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+
+.money.plus {
+  color: #0c0;
+}
+
+.money.minus {
+  color: #c00;
+}
+
+label {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+input[type='text'],
+input[type='number'] {
+  color: #ffcc00;
+  background-color: #09004000;
+  border: 3px solid #471396;
+  box-shadow: var(--box-shadow);
+  border-radius: 2px;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #471396;
+  box-shadow: var(--box-shadow);
+  font-family: playpenSans;
+  color: #fff;
+  border: 0;
+  display: block;
+  font-size: 16px;
+  margin: 30px 0 30px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+  transition-duration: 0.2s;
+}
+
+.btn:hover {
+  background-color: #270076;
+}
+
+.btn:focus,
+.delete-btn:focus {
+  outline: none;
+  background-color: #270076;
+}
+
+input:focus {
+  outline: none;
+  border: 3px solid #270076;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column-reverse;
+  /* font-family: playpenSans; */
+}
+
+.list li {
+  border: 3px solid #471396;
+  box-shadow: var(--box-shadow);
+  color: #ffcc00;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  transition-duration: 0.3s;
+}
+
+/* .list li::after {
+  border: 3px solid #c00;
+  background-color: #c00;
+  color: #ffcc00;
+  position: absolute;
+  top: -3px;
+  left: -13px;
+  content: 'X';
+  width: fit-content;
+  height: 100%;
+  padding: 0px;
+  margin: 0;
+  border-radius: 10px 0 0 10px;
+  opacity: 0;
+  transition-duration: 0.2s;
+  text-align: center;
+} */
+
+.list li.plus {
+  border: 3px solid #0c09;
+  box-shadow: inset -2px 0px 8px #0c0, 0px 0px 10px #0c09;
+}
+
+.list li.minus {
+  border: 3px solid #c009;
+  box-shadow: inset -2px 0px 8px #c00, 0px 0px 10px #c009;
+}
+
+.list li:hover {
+  background-color: #c00;
+  border: 3px solid #c009;
+  box-shadow: inset -2px 0px 8px #c00, 0px 0px 10px #c009;
+  cursor: pointer;
+}
+
+.list li:hover:after {
+  opacity: 1;
+}
+
+.delete-btn {
+  cursor: pointer;
+  background-color: #c00;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 40px;
+  padding: 6.5px;
+  position: absolute;
+  top: 50%;
+  right: -40px;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition-duration: 0.3s;
+  border-radius: 5px;
+  z-index: 0;
+}
+
+.list li:hover .delete-btn {
+  opacity: 1;
+  /* padding: 2px 22px; */
+}
